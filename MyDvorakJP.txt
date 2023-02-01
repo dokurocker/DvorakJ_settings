@@ -1,4 +1,4 @@
-順に打鍵する配列
+順にも同時にも打鍵する配列
 
 /* 
  * DvorakJP
@@ -44,7 +44,7 @@
         {z} | -35
 
     /* 「 H 」キーをコンビネーションキーとして使う */
-        Hグループ1 | {p}, {r}
+        Hグループ1 | {r}
         Hグループ2 | {n}, {s}
         Hグループ3 | {q}, {j}, {x}, {w}, {v}, {z}
 
@@ -58,7 +58,7 @@
 		Nグループ | Nグループ1, Nグループ2, Nグループ3
 
     /* 3打目の拗音拡張と撥音拡張 */
-        3打目の拡張1 | {p}{h}, {r}{h}, {l}{h}
+        3打目の拡張1 | {r}{h}, {l}{h}
         3打目の拡張2 | {n}{h}, {s}{h}
         3打目の拡張3 | {q}{h}, {j}{h}, {x}{h}, {w}{h}, {v}{h}, {z}{h}
 
@@ -98,28 +98,35 @@
 /* 単打 */
 [
 １|２|３|４|５|６|７|８|９|０|「|」|  |
-’|、|。|p |y |  |g |  |r |  |・|＝|
+’|、|。|ー|・|  |g |  |r |  |・|＝|
 a |o |e |u |i |d |  |t |n |s |ー|｀|
 ；|q |j |k |x |b |m |w |v |z |￥|
 ]
 
+(-shift[
+{!}|@ |{#}|$ |% |{^}|{&}|* |( |) |{{}|{}}|@@@|
+"  |< |>  |_ |? |F  |G  |C |R |L |?  |{+}|
+A  |O |E  |U |I |D  |H  |T |N |S |_  |~  |
+:  |Q |J  |K |X |B  |M  |W |V |Z |@@@|
+]
+
 {y}, 3打目の拗音拡張と撥音拡張, C関連 ,L関連 ,H関連, F関連 [
    |   |   |   |   |  |  |  |  |  |  |  |  |
-ai |ou |ei |   |   |  |  |  |  |  |  |  |
+ai |ou |ei |uu |ui |  |  |  |  |  |  |  |
    |   |   |   |   |  |  |  |  |  |  |  |
 ann|onn|enn|unn|inn|  |  |  |  |  |  |
 ]
 
 Hグループ[
    |   |   |   |   |  |  |  |  |  |  |  |  |
-ai |ou |ei |   |   |  |  |  |  |  |  |  |
+ai |ou |ei |uu |ui |  |  |  |  |  |  |  |
    |   |   |   |   |  |y |  |n |  |  |  |
 ann|onn|enn|unn|inn|  |  |  |  |  |  |
 ]
 
 Nグループ[
    |   |   |   |   |  |  |  |  |  |  |  |  |
-ai |ou |ei |   |   |  |  |  |  |  |  |  |
+ai |ou |ei |uu |ui |  |  |  |  |  |  |  |
    |   |   |   |   |  |  |  |y |  |  |  |
 ann|onn|enn|unn|inn|  |  |  |  |  |  |
 ]
@@ -127,14 +134,14 @@ ann|onn|enn|unn|inn|  |  |  |  |  |  |
 /* c */
 {c}[
     |    |    |    |    |  |  |  |  |  |  |  |  |
-kai |kou |kei |    |ky  |  |  |  |  |  |  |  |
+kai |kou |kei |kuu |kui |  |  |  |  |  |  |  |
 ka  |ko  |ke  |ku  |ki  |  |ch|  |ky|  |  |  |
 kann|konn|kenn|kunn|kinn|  |  |  |  |  |  |
 ]
 
 {c}{c}[
      |     |     |     |     |  |   |  |   |  |  |  |  |
-kkai |kkou |kkei |     |kky  |  |   |  |   |  |  |  |
+kkai |kkou |kkei |kkuu |kkui |  |   |  |   |  |  |  |
 kka  |kko  |kke  |kku  |kki  |  |cch|  |kky|  |  |  |
 kkann|kkonn|kkenn|kkunn|kkinn|  |   |  |   |  |  |
 ]
@@ -142,14 +149,14 @@ kkann|kkonn|kkenn|kkunn|kkinn|  |   |  |   |  |  |
 /* l */
 {l}[
     |    |    |    |    |  |  |  |  |  |  |  |  |
-pai |pou |pei |    |py  |  |  |  |  |  |  |  |
+pai |pou |pei |puu |pui |  |  |  |  |  |  |  |
 pa  |po  |pe  |pu  |pi  |  |py|  |  |  |  |  |
 pann|ponn|penn|punn|pinn|  |  |  |  |  |  |
 ]
 
 {l}{l}[
      |     |     |     |     |  |   |  |   |  |  |  |  |
-ppai |ppou |ppei |     |ppy  |  |   |  |   |  |  |  |
+ppai |ppou |ppei |ppuu |ppui |  |   |  |   |  |  |  |
 ppa  |ppo  |ppe  |ppu  |ppi  |  |ppy|  |   |  |  |  |
 ppann|pponn|ppenn|ppunn|ppinn|  |   |  |   |  |  |
 ]
@@ -157,14 +164,14 @@ ppann|pponn|ppenn|ppunn|ppinn|  |   |  |   |  |  |
 /* h */
 {h},{n}{n}{h}[
     |    |    |    |    |  |  |  |  |  |  |  |  |
-hai |hou |hei |    |hy  |  |  |  |  |  |  |  |
+hai |hou |hei |huu |hui |  |  |  |  |  |  |  |
 ha  |ho  |he  |hu  |hi  |  |  |  |hy|  |  |  |
 hann|honn|henn|hunn|hinn|  |  |f |  |  |  |
 ]
 
 {h}{h}[
      |     |     |     |     |  |   |  |   |  |  |  |  |
-hhai |hhou |hhei |     |hhy  |  |   |  |   |  |  |  |
+hhai |hhou |hhei |hhuu |hhui |  |   |  |   |  |  |  |
 hha  |hho  |hhe  |hhu  |hhi  |  |   |  |hhy|  |  |  |
 hhann|hhonn|hhenn|hhunn|hhinn|  |   |ff|   |  |  |
 ]
@@ -172,14 +179,14 @@ hhann|hhonn|hhenn|hhunn|hhinn|  |   |ff|   |  |  |
 /* f */
 {f}[
     |    |    |    |    |  |  |  |  |  |  |  |  |
-yai |you |yei |    |fy  |  |  |  |  |  |  |  |
+yai |you |yei |yuu |yui |  |  |  |  |  |  |  |
 ya  |yo  |ye  |yu  |yi  |  |  |  |fy|  |  |  |
 yann|yonn|yenn|yunn|yinn|  |  |  |  |  |  |
 ]
 
 {f}{f}[
      |     |     |     |     |  |   |  |   |  |  |  |  |
-yyai |yyou |yyei |     |ffy  |  |   |  |   |  |  |  |
+yyai |yyou |yyei |yyuu |yyui |  |   |  |   |  |  |  |
 yya  |yyo  |yye  |yyu  |yyi  |  |   |  |ffy|  |  |  |
 yyann|yyonn|yyenn|yyunn|yyinn|  |   |  |   |  |  |
 ]
